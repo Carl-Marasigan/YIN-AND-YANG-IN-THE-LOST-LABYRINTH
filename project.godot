@@ -1,0 +1,36 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="Main Menu"
+run/main_scene="res://FinalMenu.tscn"
+config/icon="res://icon.png"
+
+[audio]
+
+enable_audio_input=true
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+mouse_cursor/script_templates_search_path="res://script_templates"
+mouse_cursor/image="res://1.png"
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+environment/default_environment="res://default_env.tres"

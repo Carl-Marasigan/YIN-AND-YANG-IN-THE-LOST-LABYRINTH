@@ -1,0 +1,152 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Evogria.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://GAME/Play.tscn" type="PackedScene" id=2]
+[ext_resource path="res://GAME/SETTINGSTOTITLE.gd" type="Script" id=3]
+[ext_resource path="res://loud speaker.png" type="Texture" id=4]
+[ext_resource path="res://Dzj7u29WsAIi3Xn.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 200
+font_data = ExtResource( 1 )
+
+[node name="SETTINGSBUTTON" instance=ExtResource( 2 )]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 3.0
+margin_bottom = 3.0
+script = ExtResource( 3 )
+
+[node name="CenterContainer" parent="." index="0"]
+margin_left = -4.0
+margin_top = -14.0
+margin_right = 0.0
+margin_bottom = -420.0
+
+[node name="VBoxContainer" parent="CenterContainer" index="0"]
+margin_left = 495.0
+margin_top = 20.0
+margin_right = 788.0
+margin_bottom = 293.0
+
+[node name="Label" parent="CenterContainer/VBoxContainer" index="0"]
+margin_right = 293.0
+margin_bottom = 273.0
+text = "SETTINGS
+
+"
+align = 1
+
+[node name="BACK" parent="CenterContainer/VBoxContainer/Label" index="0"]
+margin_left = 491.699
+margin_top = 14.5601
+margin_right = 761.7
+margin_bottom = 96.5601
+
+[node name="AudioStreamPlayer2D" parent="AudioEffect" index="0"]
+position = Vector2( 562.538, 126.725 )
+
+[node name="video" type="Button" parent="." index="2"]
+margin_left = 142.18
+margin_top = 139.089
+margin_right = 373.18
+margin_bottom = 240.089
+custom_fonts/font = SubResource( 1 )
+text = "VIDEO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="audio" type="Button" parent="." index="3"]
+margin_left = 911.364
+margin_top = 167.273
+margin_right = 1198.36
+margin_bottom = 277.273
+custom_fonts/font = SubResource( 1 )
+text = "audio"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="loud speaker" type="Sprite" parent="audio" index="0"]
+position = Vector2( -104.734, 236.763 )
+scale = Vector2( 0.486866, 0.414424 )
+texture = ExtResource( 4 )
+
+[node name="plus_sign" type="Button" parent="audio/loud speaker" index="0"]
+margin_left = 310.863
+margin_top = -142.043
+margin_right = 580.863
+margin_bottom = 115.957
+custom_fonts/font = SubResource( 2 )
+text = "+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="minus_sign" type="Button" parent="audio/loud speaker" index="1"]
+margin_left = 653.683
+margin_top = -134.585
+margin_right = 923.683
+margin_bottom = 123.415
+custom_fonts/font = SubResource( 2 )
+text = "-"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ctri_video" type="Control" parent="." index="4"]
+anchor_top = 0.25
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 93.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_resolution" type="OptionButton" parent="ctri_video" index="0"]
+margin_left = 33.4548
+margin_top = 2.45471
+margin_right = 511.455
+margin_bottom = 77.4547
+
+[node name="btn_fullscreen" type="OptionButton" parent="ctri_video" index="1"]
+margin_left = 31.0
+margin_top = 111.0
+margin_right = 515.0
+margin_bottom = 186.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ctrl_audio" type="Control" parent="." index="5"]
+anchor_top = 0.25
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 93.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ctrl_controls" type="Control" parent="." index="6"]
+anchor_top = 0.25
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -3.18176
+margin_top = 99.1818
+margin_right = -6.18176
+margin_bottom = 6.18176
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dzj7u29WsAIi3Xn" type="Sprite" parent="." index="7"]
+position = Vector2( 725.166, 578.304 )
+scale = Vector2( 1.24124, 0.836462 )
+texture = ExtResource( 5 )

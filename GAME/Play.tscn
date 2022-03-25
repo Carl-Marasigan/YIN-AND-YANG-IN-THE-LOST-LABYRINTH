@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Evogria.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://GAME/returnplaytitle.gd" type="Script" id=2]
+[ext_resource path="res://finalmusic.ogg" type="AudioStream" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+font_data = ExtResource( 1 )
+
+[node name="Play" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2.82837
+margin_right = -2.82837
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 447.0
+margin_top = 269.0
+margin_right = 832.0
+margin_bottom = 450.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 385.0
+margin_bottom = 181.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 5
+text = "
+START GAME"
+
+[node name="BACK" type="Button" parent="CenterContainer/VBoxContainer/Label"]
+margin_left = 503.662
+margin_top = 326.245
+margin_right = 773.662
+margin_bottom = 408.245
+custom_fonts/font = SubResource( 2 )
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioEffect" type="Node" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="AudioEffect"]
+position = Vector2( 666.693, 490.954 )
+stream = ExtResource( 3 )
+volume_db = 3.0
+autoplay = true
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Label/BACK" to="." method="_on_BACK_pressed"]
