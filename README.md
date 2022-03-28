@@ -9,5 +9,4 @@ Game Interface
 
 
 
-https://user-images.githubusercontent.com/90967308/160370601-27903edf-68db-4525-bbaa-235f8512b4e5.mp4
 
